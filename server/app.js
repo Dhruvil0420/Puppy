@@ -12,13 +12,25 @@ import mountRoutes from './routes/index.js';
 import notFound from './middleware/notFound.js';
 import errorHandler from './middleware/errorHandler.js';
 
+import connectDB from './config/db.js';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 
-/* ── Trust proxy (Render / Nginx / etc.) ───────────────────────── */
+/* ── Trust proxy (Vercel / Render / Nginx) ─────────────────────── */
 app.set('trust proxy', 1);
+
+/* ── Database Connection Middleware ────────────────────────────── */
+app.use(async (_req, _res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    next(err);
+  }
+});
 
 /* ── Security ──────────────────────────────────────────────────── */
 app.use(helmet());
