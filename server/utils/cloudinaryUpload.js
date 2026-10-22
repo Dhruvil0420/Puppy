@@ -89,3 +89,33 @@ export const deleteFromCloudinary = async (publicId, resourceType = 'image') => 
     return null;
   }
 };
+
+/**
+ * Permanently removes all Cloudinary image and video assets associated with a Puppy document.
+ * @param {Object} puppy - Mongoose Puppy document or plain object
+ */
+export const deletePuppyFiles = (puppy) => {
+  if (!puppy) return;
+
+  if (Array.isArray(puppy.images)) {
+    puppy.images.forEach((img) => {
+      if (img?.publicId) {
+        deleteFromCloudinary(img.publicId, 'image');
+      }
+    });
+  }
+
+  if (puppy.videoPublicId) {
+    deleteFromCloudinary(puppy.videoPublicId, 'video');
+  }
+};
+
+/**
+ * Permanently removes a HappyFamily image from Cloudinary.
+ * @param {Object} doc - Mongoose HappyFamily document or plain object
+ */
+export const deleteHappyFamilyFile = (doc) => {
+  if (doc?.publicId) {
+    deleteFromCloudinary(doc.publicId, 'image');
+  }
+};

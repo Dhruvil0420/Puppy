@@ -107,13 +107,10 @@ Puppy/
 │   ├── middleware/             # protect (JWT), upload (Multer memory), errorHandler, validate
 │   ├── models/                 # Mongoose schemas (Puppy, Enquiry, Admin, FAQ, Setting, etc.)
 │   ├── routes/                 # publicRoutes, authRoutes, adminRoutes, enquiryRoutes
-│   ├── scripts/                # Database and media maintenance utilities
-│   ├── seed/                   # Database seeder scripts (seed/index.js, images.json)
-│   ├── utils/                  # cloudinaryUpload.js, fileHelper.js
+│   ├── utils/                  # cloudinaryUpload.js (Cloudinary stream uploads & asset deletion)
 │   ├── app.js                  # Express setup (security, rate limits, routes)
 │   ├── server.js               # HTTP server entry point with graceful shutdown
-│   ├── package.json            # Server dependencies
-│   └── api.http                # REST client test requests
+│   └── package.json            # Server dependencies
 ├── .gitignore                  # Git root ignore (protects .env, node_modules, uploads)
 └── README.md                   # Complete unified documentation
 ```

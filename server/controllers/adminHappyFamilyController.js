@@ -1,5 +1,5 @@
 import HappyFamily from '../models/HappyFamily.js';
-import { deleteHappyFamilyFile } from '../utils/fileHelper.js';
+import { deleteHappyFamilyFile } from '../utils/cloudinaryUpload.js';
 
 export const listHappyFamilies = async (_req, res, next) => {
   try {

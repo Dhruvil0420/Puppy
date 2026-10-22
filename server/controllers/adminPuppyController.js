@@ -1,6 +1,5 @@
 import Puppy from '../models/Puppy.js';
-import { deletePuppyFiles } from '../utils/fileHelper.js';
-import { deleteFromCloudinary } from '../utils/cloudinaryUpload.js';
+import { deletePuppyFiles, deleteFromCloudinary } from '../utils/cloudinaryUpload.js';
 
 /* ── GET /api/admin/puppies ────────────────────────────────────── */
 export const listPuppies = async (req, res, next) => {
