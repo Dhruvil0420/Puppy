@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import api from '../api/axios';
-import HeroSection from '../components/home/HeroSection';
-import MeetThePupsSection from '../components/home/MeetThePupsSection';
-import TwoWaysSection from '../components/home/TwoWaysSection';
-import JourneySection from '../components/home/JourneySection';
-import TrustSection from '../components/home/TrustSection';
-import HappyFamiliesPreview from '../components/home/HappyFamiliesPreview';
-import FaqPreview from '../components/home/FaqPreview';
-import FinalCtaSection from '../components/home/FinalCtaSection';
+import api from '@/services/api';
+import HeroSection from '@/components/home/HeroSection';
+import MeetThePupsSection from '@/components/home/MeetThePupsSection';
+import TwoWaysSection from '@/components/home/TwoWaysSection';
+import JourneySection from '@/components/home/JourneySection';
+import TrustSection from '@/components/home/TrustSection';
+import HappyFamiliesPreview from '@/components/home/HappyFamiliesPreview';
+import FaqPreview from '@/components/home/FaqPreview';
+import FinalCtaSection from '@/components/home/FinalCtaSection';
 
 export default function HomePage() {
   const [puppies, setPuppies] = useState([]);

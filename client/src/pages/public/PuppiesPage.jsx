@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useSearchParams, Link } from 'react-router-dom';
-import api from '../api/axios';
-import SectionHeading from '../components/ui/SectionHeading';
-import PuppyGrid from '../components/puppies/PuppyGrid';
-import PuppyCard from '../components/puppies/PuppyCard';
-import ErrorState from '../components/ui/ErrorState';
-import Button from '../components/ui/Button';
-import { buildWhatsAppLink } from '../utils/whatsapp';
-import { useSettings } from '../context/SettingsContext';
+import api from '@/services/api';
+import SectionHeading from '@/components/ui/SectionHeading';
+import PuppyGrid from '@/components/puppies/PuppyGrid';
+import PuppyCard from '@/components/puppies/PuppyCard';
+import ErrorState from '@/components/ui/ErrorState';
+import Button from '@/components/ui/Button';
+import { buildWhatsAppLink } from '@/utils/whatsapp';
+import { useSettings } from '@/context/SettingsContext';
 
 export default function PuppiesPage() {
   const [searchParams, setSearchParams] = useSearchParams();

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { uploadImages } from '../../api/upload';
+import { uploadImages } from '@/services/uploadService';
 
 export default function ImageUploader({
   value = [], // Array of URLs or objects { url, publicId }

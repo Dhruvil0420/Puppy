@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import api from '../../api/axios';
+import api from '@/services/api';
 import Button from '../ui/Button';
 
 export default function EnquiryForm({ puppy, onSuccess }) {

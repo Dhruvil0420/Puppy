@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import api from '../../api/axios';
+import api from '@/services/api';
 import Button from '../../components/ui/Button';
 import { buildWhatsAppLink } from '../../utils/whatsapp';
 

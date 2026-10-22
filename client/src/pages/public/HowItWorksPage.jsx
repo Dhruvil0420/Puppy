@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import SectionHeading from '../components/ui/SectionHeading';
-import Button from '../components/ui/Button';
-import { buildWhatsAppLink } from '../utils/whatsapp';
-import { useSettings } from '../context/SettingsContext';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Button from '@/components/ui/Button';
+import { buildWhatsAppLink } from '@/utils/whatsapp';
+import { useSettings } from '@/context/SettingsContext';
 
 export default function HowItWorksPage() {
   const { settings } = useSettings();

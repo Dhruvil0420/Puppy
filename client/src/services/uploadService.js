@@ -1,4 +1,4 @@
-import api from './axios';
+import api from './api';
 
 /**
  * Upload multiple images to Cloudinary via /api/admin/upload/images

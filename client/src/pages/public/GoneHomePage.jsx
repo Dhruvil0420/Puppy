@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import api from '../api/axios';
-import SectionHeading from '../components/ui/SectionHeading';
-import PuppyCard from '../components/puppies/PuppyCard';
-import Skeleton from '../components/ui/Skeleton';
-import Button from '../components/ui/Button';
+import api from '@/services/api';
+import SectionHeading from '@/components/ui/SectionHeading';
+import PuppyCard from '@/components/puppies/PuppyCard';
+import Skeleton from '@/components/ui/Skeleton';
+import Button from '@/components/ui/Button';
 
 export default function GoneHomePage() {
   const [puppies, setPuppies] = useState([]);

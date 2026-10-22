@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useSearchParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import api from '../api/axios';
-import SectionHeading from '../components/ui/SectionHeading';
-import Button from '../components/ui/Button';
-import { useSettings } from '../context/SettingsContext';
-import { buildWhatsAppLink } from '../utils/whatsapp';
+import api from '@/services/api';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Button from '@/components/ui/Button';
+import { useSettings } from '@/context/SettingsContext';
+import { buildWhatsAppLink } from '@/utils/whatsapp';
 
 export default function ContactPage() {
   const [searchParams] = useSearchParams();

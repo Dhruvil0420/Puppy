@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import SectionHeading from '../components/ui/SectionHeading';
-import Accordion from '../components/ui/Accordion';
-import Skeleton from '../components/ui/Skeleton';
-import Button from '../components/ui/Button';
-import api from '../api/axios';
-import { buildWhatsAppLink } from '../utils/whatsapp';
-import { useSettings } from '../context/SettingsContext';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Accordion from '@/components/ui/Accordion';
+import Skeleton from '@/components/ui/Skeleton';
+import Button from '@/components/ui/Button';
+import api from '@/services/api';
+import { buildWhatsAppLink } from '@/utils/whatsapp';
+import { useSettings } from '@/context/SettingsContext';
 
 export default function FaqPage() {
   const { settings } = useSettings();

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SectionHeading from '../ui/SectionHeading';
 import Accordion from '../ui/Accordion';
-import api from '../../api/axios';
+import api from '@/services/api';
 import Skeleton from '../ui/Skeleton';
 
 export default function FaqPreview() {

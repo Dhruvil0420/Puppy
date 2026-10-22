@@ -5,15 +5,15 @@ import Skeleton from '../components/ui/Skeleton';
 import ProtectedRoute from './ProtectedRoute';
 
 // Public Pages
-const HomePage = lazy(() => import('../pages/HomePage'));
-const PuppiesPage = lazy(() => import('../pages/PuppiesPage'));
-const PuppyDetailPage = lazy(() => import('../pages/PuppyDetailPage'));
-const GoneHomePage = lazy(() => import('../pages/GoneHomePage'));
-const HappyFamiliesPage = lazy(() => import('../pages/HappyFamiliesPage'));
-const HowItWorksPage = lazy(() => import('../pages/HowItWorksPage'));
-const FaqPage = lazy(() => import('../pages/FaqPage'));
-const ContactPage = lazy(() => import('../pages/ContactPage'));
-const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
+const HomePage = lazy(() => import('../pages/public/HomePage'));
+const PuppiesPage = lazy(() => import('../pages/public/PuppiesPage'));
+const PuppyDetailPage = lazy(() => import('../pages/public/PuppyDetailPage'));
+const GoneHomePage = lazy(() => import('../pages/public/GoneHomePage'));
+const HappyFamiliesPage = lazy(() => import('../pages/public/HappyFamiliesPage'));
+const HowItWorksPage = lazy(() => import('../pages/public/HowItWorksPage'));
+const FaqPage = lazy(() => import('../pages/public/FaqPage'));
+const ContactPage = lazy(() => import('../pages/public/ContactPage'));
+const NotFoundPage = lazy(() => import('../pages/public/NotFoundPage'));
 
 // Admin Pages
 const AdminLoginPage = lazy(() => import('../pages/admin/AdminLoginPage'));

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import api from '../api/axios';
-import SectionHeading from '../components/ui/SectionHeading';
-import Skeleton from '../components/ui/Skeleton';
-import Lightbox from '../components/ui/Lightbox';
-import Button from '../components/ui/Button';
+import api from '@/services/api';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Skeleton from '@/components/ui/Skeleton';
+import Lightbox from '@/components/ui/Lightbox';
+import Button from '@/components/ui/Button';
 
 export default function HappyFamiliesPage() {
   const [families, setFamilies] = useState([]);

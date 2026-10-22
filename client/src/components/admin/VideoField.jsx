@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { uploadVideo, uploadVideoFromUrl, deleteUpload } from '../../api/upload';
+import { uploadVideo, uploadVideoFromUrl, deleteUpload } from '@/services/uploadService';
 
 export default function VideoField({
   videoUrl = '',

@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import api from '../api/axios';
-import Badge from '../components/ui/Badge';
-import Button from '../components/ui/Button';
-import Skeleton from '../components/ui/Skeleton';
-import Lightbox from '../components/ui/Lightbox';
-import EnquiryForm from '../components/puppies/EnquiryForm';
-import { buildWhatsAppLink } from '../utils/whatsapp';
-import { useSettings } from '../context/SettingsContext';
+import api from '@/services/api';
+import Badge from '@/components/ui/Badge';
+import Button from '@/components/ui/Button';
+import Skeleton from '@/components/ui/Skeleton';
+import Lightbox from '@/components/ui/Lightbox';
+import EnquiryForm from '@/components/puppies/EnquiryForm';
+import { buildWhatsAppLink } from '@/utils/whatsapp';
+import { useSettings } from '@/context/SettingsContext';
 
 export default function PuppyDetailPage() {
   const { slug } = useParams();
