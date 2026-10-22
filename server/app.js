@@ -55,9 +55,6 @@ if (process.env.NODE_ENV !== 'test') {
   app.use(morgan('dev'));
 }
 
-/* ── Static files (uploaded images / videos) ───────────────────── */
-app.use('/uploads', express.static(path.join(__dirname, 'public', 'uploads')));
-
 /* ── Health check ──────────────────────────────────────────────── */
 app.get('/api/health', (_req, res) => {
   res.json({
