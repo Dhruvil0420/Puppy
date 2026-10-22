@@ -8,7 +8,11 @@ import connectDB from './config/db.js';
 const PORT = process.env.PORT || 5000;
 
 const start = async () => {
-  await connectDB();
+  try {
+    await connectDB();
+  } catch (err) {
+    console.error('Failed to connect to DB during startup:', err);
+  }
 
   const server = app.listen(PORT, () => {
     console.log(
