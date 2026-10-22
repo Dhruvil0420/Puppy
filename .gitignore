@@ -6,18 +6,58 @@ node_modules/
 dist/
 build/
 */dist/
+.vite/
+.parcel-cache/
 
-# Environment files
+# Environment files (never commit secrets)
 .env
-.env*.local
+.env.*
+!.env.example
 client/.env
+client/.env.*
+!client/.env.example
 server/.env
+server/.env.*
+!server/.env.example
 *.env
 
-# Local Uploads & Temporary artifacts
+# Local Uploads & Media (media is hosted on Cloudinary)
+server/public/
 server/public/uploads/
-qa-artifacts/
+uploads/
+*/uploads/
+puppy-media/
+sample-data/
+
+# Temporary, Cache & Log files
+tmp/
+temp/
+.tmp/
+cache/
+logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
+
+# Test output & recordings
+playwright-report/
+test-results/
+screenshots/
+recordings/
+qa-artifacts/
+
+# AI-tool directories & notes
+.antigravity/
+.cursor/
+.claude/
+.gemini/
+.windsurf/
+.aider*
+brain/
+scratch/
+artifacts/
 
 # Editor & OS files
 .DS_Store
