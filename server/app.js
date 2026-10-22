@@ -67,7 +67,22 @@ if (process.env.NODE_ENV !== 'test') {
   app.use(morgan('dev'));
 }
 
-/* ── Health check ──────────────────────────────────────────────── */
+/* ── Root & Health check ────────────────────────────────────────── */
+app.get('/', (_req, res) => {
+  res.json({
+    success: true,
+    message: 'TeddyPups U.A.E. API Server is running.',
+    health: '/api/health',
+    endpoints: {
+      puppies: '/api/puppies',
+      happyFamilies: '/api/happy-families',
+      testimonials: '/api/testimonials',
+      faqs: '/api/faqs',
+      settings: '/api/settings',
+    },
+  });
+});
+
 app.get('/api/health', (_req, res) => {
   res.json({
     success: true,
