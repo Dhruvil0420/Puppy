@@ -166,18 +166,18 @@ export default function PuppyDetailPage() {
 
       <div className="py-8 sm:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="pb-6 border-b border-cocoa/10 flex items-center justify-between text-xs sm:text-sm">
-          <div className="flex items-center gap-2 text-cocoa/60 font-medium">
+        <nav aria-label="Breadcrumb" className="pb-6 border-b border-cocoa/10 flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm">
+          <div className="flex items-center gap-2 text-cocoa/70 font-medium">
+            <Link to="/puppies" className="text-apricot-dark hover:underline font-semibold flex items-center gap-1 mr-2">
+              ← All puppies
+            </Link>
+            <span className="text-cocoa/30">|</span>
             <Link to="/" className="hover:text-cocoa">Home</Link>
             <span>/</span>
             <Link to="/puppies" className="hover:text-cocoa">Puppies</Link>
             <span>/</span>
-            <span className="text-cocoa font-semibold">{puppy.name}</span>
+            <span className="text-cocoa font-semibold truncate max-w-[200px]">{puppy.name}</span>
           </div>
-
-          <Link to="/puppies" className="font-semibold text-apricot-dark hover:underline">
-            ← All puppies
-          </Link>
         </nav>
 
         {/* Main Grid: Gallery & Puppy Info */}
@@ -343,10 +343,10 @@ export default function PuppyDetailPage() {
                 </Button>
 
                 <Button
-                  variant="outline"
+                  variant="secondary"
                   size="md"
                   onClick={scrollToEnquiry}
-                  className="w-full"
+                  className="w-full bg-cocoa text-cream hover:bg-cocoa-light shadow-soft"
                 >
                   Send an enquiry
                 </Button>
@@ -356,9 +356,9 @@ export default function PuppyDetailPage() {
             {/* Description */}
             {puppy.description && (
               <div className="pt-2">
-                <h3 className="font-display text-lg font-semibold text-cocoa mb-2">
+                <h2 className="font-display text-lg font-semibold text-cocoa mb-2">
                   Meet {puppy.name}
-                </h3>
+                </h2>
                 <p className="text-cocoa/80 text-sm leading-relaxed whitespace-pre-line">
                   {puppy.description}
                 </p>
@@ -460,30 +460,30 @@ export default function PuppyDetailPage() {
             {prev && (
               <Link
                 to={`/puppies/${prev.slug}`}
-                className="group rounded-3xl bg-sand/30 hover:bg-sand/60 border border-cocoa/10 p-6 flex items-center justify-between transition-all"
+                className="group rounded-3xl bg-sand/30 hover:bg-sand/60 border border-cocoa/10 p-6 flex items-center gap-4 transition-all"
               >
+                <span className="text-2xl text-cocoa group-hover:-translate-x-1 transition-transform" aria-hidden="true">‹</span>
                 <div>
-                  <span className="text-xs text-cocoa/50 font-bold uppercase tracking-wider">‹ Previous Puppy</span>
+                  <span className="text-xs text-cocoa/60 font-medium">Previous puppy</span>
                   <h4 className="font-display text-2xl font-medium text-cocoa group-hover:text-apricot transition-colors mt-0.5">
                     {prev.name}
                   </h4>
                 </div>
-                <span className="text-2xl text-cocoa group-hover:-translate-x-1 transition-transform">‹</span>
               </Link>
             )}
 
             {next && (
               <Link
                 to={`/puppies/${next.slug}`}
-                className="group rounded-3xl bg-sand/30 hover:bg-sand/60 border border-cocoa/10 p-6 flex items-center justify-between transition-all text-right ml-auto w-full"
+                className="group rounded-3xl bg-sand/30 hover:bg-sand/60 border border-cocoa/10 p-6 flex items-center justify-between transition-all ml-auto w-full"
               >
-                <span className="text-2xl text-cocoa group-hover:translate-x-1 transition-transform">›</span>
                 <div>
-                  <span className="text-xs text-cocoa/50 font-bold uppercase tracking-wider">Next Puppy ›</span>
+                  <span className="text-xs text-cocoa/60 font-medium">Next puppy</span>
                   <h4 className="font-display text-2xl font-medium text-cocoa group-hover:text-apricot transition-colors mt-0.5">
                     {next.name}
                   </h4>
                 </div>
+                <span className="text-2xl text-cocoa group-hover:translate-x-1 transition-transform" aria-hidden="true">›</span>
               </Link>
             )}
           </div>

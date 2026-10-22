@@ -30,7 +30,7 @@ export default function Button({
     secondary:
       'bg-honey text-cocoa hover:bg-honey/80 shadow-soft',
     whatsapp:
-      'bg-[#25D366] text-white hover:bg-[#20bd5a] shadow-soft hover:shadow-card',
+      'bg-[#0f8247] text-white hover:bg-[#0c6b3a] shadow-soft hover:shadow-card',
     outline:
       'border-2 border-cocoa text-cocoa hover:bg-cocoa hover:text-cream',
     ghost:

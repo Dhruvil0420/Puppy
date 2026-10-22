@@ -182,7 +182,7 @@ export default function EnquiryForm({ puppy, onSuccess }) {
               : 'border-cocoa/15 bg-cream/50 focus:bg-white focus:border-cocoa'
           }`}
         />
-        <p className="mt-1 text-[11px] text-cocoa/50">
+        <p className="mt-1 text-xs text-cocoa/70">
           With country code, e.g. +971 50 123 4567
         </p>
         {fieldErrors.phone && (

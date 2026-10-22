@@ -173,17 +173,21 @@ export default function HeroSection({ featuredPuppies = [] }) {
 
             {/* Dots navigation */}
             {slides.length > 1 && (
-              <div className="flex items-center justify-center gap-2 mt-4">
+              <div className="flex items-center justify-center gap-1.5 mt-4">
                 {slides.map((_, dotIdx) => (
                   <button
                     key={dotIdx}
                     type="button"
                     onClick={() => setCurrentIndex(dotIdx)}
-                    className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                      dotIdx === currentIndex ? 'w-8 bg-cocoa' : 'w-2.5 bg-cocoa/20 hover:bg-cocoa/40'
-                    }`}
+                    className="min-h-[28px] min-w-[28px] inline-flex items-center justify-center p-1 cursor-pointer"
                     aria-label={`Go to slide ${dotIdx + 1}`}
-                  />
+                  >
+                    <span
+                      className={`h-2.5 rounded-full transition-all duration-300 block ${
+                        dotIdx === currentIndex ? 'w-8 bg-cocoa' : 'w-2.5 bg-cocoa/30 hover:bg-cocoa/60'
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
             )}

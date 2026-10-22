@@ -6,8 +6,10 @@ export default function SectionHeading({
   subtitle,
   align = 'center', // 'center' | 'left'
   className = '',
+  asLevel = 2,
 }) {
   const isCenter = align === 'center';
+  const HeadingTag = `h${asLevel}`;
 
   return (
     <div className={`space-y-3 ${isCenter ? 'text-center mx-auto max-w-2xl' : 'text-left max-w-2xl'} ${className}`}>
@@ -17,9 +19,9 @@ export default function SectionHeading({
         </p>
       )}
       {title && (
-        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-medium text-cocoa leading-[1.15] tracking-tight">
+        <HeadingTag className="font-display text-3xl sm:text-4xl md:text-5xl font-medium text-cocoa leading-[1.15] tracking-tight">
           {title}
-        </h2>
+        </HeadingTag>
       )}
       {subtitle && (
         <p className="text-cocoa/80 text-base sm:text-lg leading-relaxed pt-1">

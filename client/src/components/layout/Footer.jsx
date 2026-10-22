@@ -71,9 +71,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="md:col-span-3 space-y-3">
-            <h4 className="font-display text-lg font-semibold text-cocoa">
+            <h3 className="font-display text-lg font-semibold text-cocoa">
               Explore
-            </h4>
+            </h3>
             <ul className="space-y-2 text-sm text-cocoa/80">
               <li>
                 <Link to="/" className="hover:text-apricot transition-colors">
@@ -105,48 +105,46 @@ export default function Footer() {
 
           {/* Say Hello */}
           <div className="md:col-span-4 space-y-3">
-            <h4 className="font-display text-lg font-semibold text-cocoa">
+            <h3 className="font-display text-lg font-semibold text-cocoa">
               Say hello
-            </h4>
-            <div className="space-y-2 text-sm text-cocoa/80 leading-relaxed">
-              <p>
-                <strong className="text-cocoa font-semibold">Location:</strong>{' '}
-                {settings?.address || 'Downtown Dubai, UAE'}
-              </p>
-              <p>
-                <strong className="text-cocoa font-semibold">Phone:</strong>{' '}
+            </h3>
+            <dl className="grid grid-cols-[80px_1fr] gap-x-3 gap-y-2 text-sm text-cocoa/80 leading-relaxed">
+              <dt className="text-cocoa font-semibold">Location:</dt>
+              <dd>{settings?.address || 'Downtown Dubai, UAE'}</dd>
+              <dt className="text-cocoa font-semibold">Phone:</dt>
+              <dd>
                 <a href={`tel:${settings?.phone}`} className="hover:underline">
                   {settings?.phone || '+971 54 167 6733'}
                 </a>
-              </p>
-              <p>
-                <strong className="text-cocoa font-semibold">WhatsApp:</strong>{' '}
+              </dd>
+              <dt className="text-cocoa font-semibold">WhatsApp:</dt>
+              <dd>
                 <a
                   href={waLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-emerald-700 font-medium hover:underline"
+                  className="text-emerald-800 font-medium hover:underline"
                 >
                   Chat with us
                 </a>
-              </p>
-              <p>
-                <strong className="text-cocoa font-semibold">Email:</strong>{' '}
+              </dd>
+              <dt className="text-cocoa font-semibold">Email:</dt>
+              <dd>
                 <a href={`mailto:${settings?.email}`} className="hover:underline">
                   {settings?.email || 'info@teddypups.ae'}
                 </a>
-              </p>
-            </div>
+              </dd>
+            </dl>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-cocoa/10 flex flex-col sm:flex-row items-center justify-between text-xs text-cocoa/60 gap-4">
+        <div className="mt-12 pt-8 border-t border-cocoa/10 flex flex-col sm:flex-row items-center justify-between text-xs text-cocoa/80 gap-4">
           <p>{settings?.footerText || '© 2026 TeddyPups U.A.E. All rights reserved.'}</p>
           <div className="flex gap-4">
             <Link to="/contact" className="hover:underline">Contact us</Link>
             <span>•</span>
-            <Link to="/admin/login" className="hover:underline opacity-40 hover:opacity-100">Admin portal</Link>
+            <Link to="/admin/login" className="hover:underline text-cocoa/75 hover:text-cocoa font-medium">Admin portal</Link>
           </div>
         </div>
       </div>

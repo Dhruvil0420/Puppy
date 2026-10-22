@@ -71,6 +71,7 @@ export default function HappyFamiliesPage() {
 
       <div className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          asLevel={1}
           eyebrow="our wall of happy endings"
           title="Happy families"
           subtitle="Real moments of love from families who welcomed their little ones into their homes."

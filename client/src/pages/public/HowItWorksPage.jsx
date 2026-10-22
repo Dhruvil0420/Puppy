@@ -60,6 +60,7 @@ export default function HowItWorksPage() {
 
       <div className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          asLevel={1}
           eyebrow="the adoption journey"
           title="How it works"
           subtitle="Everything you need to know about welcoming your new family member home with complete peace of mind."
